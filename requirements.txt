@@ -1,0 +1,8 @@
+Django>=5.0,<6.0
+djangorestframework>=3.14
+psycopg2-binary>=2.9
+python-decouple>=3.8
+requests>=2.31
+spotipy>=2.23
+django-cors-headers>=4.3
+gunicorn>=21.2
