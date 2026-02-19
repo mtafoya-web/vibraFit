@@ -19,6 +19,8 @@ from django.urls import path, include
 
 urlpatterns = [
     #path function expects two arguments: route, view
+    #Start path is the login page
+    path("", include("login.urls")), 
     path("login/", include("login.urls")),
     path('admin/', admin.site.urls),
 ]
