@@ -35,8 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',  #Framework for content types
     'django.contrib.sessions',      #Session Framework
     'django.contrib.messages',      #Messaging framework
-    'django.contrib.staticfiles',   #managing static files
-    
+    'django.contrib.staticfiles',   #managing static files 
     'login',
 ]
 
