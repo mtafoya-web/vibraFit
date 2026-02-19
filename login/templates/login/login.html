@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!--Controls how website behaves on mobile device-->>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>VibraFit - Login</title>
+        <!--Static files: css-->
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    </head>
+
+    <body>
+        <!--Login Div-->
+        <div class = "auth">
+        <div class="login-box">
+            <!--Title-->
+            <div class="logo">
+                <img src="{% static 'images/vibraFit_logo.png' %}" alt="VibraFit logo">
+                <h1 class="brand">Vibra<span>Fit</span></h1>
+            </div>
+            <!--Login form-->
+            <form method="post">
+                <input type="text" placeholder="username" required>
+                <input type="password" placeholder="password" required>
+                <button class="login-btn"type = "submit">Login</button>
+            </form>
+            <!--Links/Forgotten Info-->
+            <div class="link-box">
+                <!--links to forgot password(Todo: Add hyperlinks to forgot password)-->
+                <a href="#">Forgot password?</a>
+                <!--links to create account(Todo: Add hyperliks to create account)-->
+                <a href="#">Create account</a>
+            </div>
+            <!--Divder-->
+            <div class="divider">
+                <span>or</span>
+            </div>
+            <!--Social Login-->
+            <div class = "social-login">
+                <button class = "google-btn">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google"> 
+                    Contine with google  
+                </button>
+                <button class = "apple-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+                    Continue with apple
+                </button>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
