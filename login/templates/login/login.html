@@ -20,9 +20,20 @@
                 <h1 class="brand">Vibra<span>Fit</span></h1>
             </div>
             <!--Login form-->
-            <form method="post">
-                <input type="text" placeholder="username" required>
-                <input type="password" placeholder="password" required>
+            <form method="POST">
+                {% csrf_token %}
+
+                {% if request.GET.next %}
+                    <input type="hidden" name="next" value="{{ request.GET.next }}">
+                {% endif %}
+
+                {{form.username}}
+                {{form.password}}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p style="color: red" class="error">{{message}}</p>
+                    {% endfor %}
+                {% endif %}
                 <button class="login-btn"type = "submit">Login</button>
             </form>
             <!--Links/Forgotten Info-->
