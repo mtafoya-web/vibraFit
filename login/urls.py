@@ -1,7 +1,9 @@
 from django.urls import path
-from . import views
+from .views import login_view, logout_view, home_redirect
 
 #Define the URLconf for the polls app
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", home_redirect),
+    path("login/", login_view, name="login" ),
+    path("logout/", logout_view, name = "logout" )
 ]
